@@ -3,21 +3,23 @@
 Servo myservo;  // create servo object to control a servo 
  
 // variables to store our basic servo positions : up, stirring high, stirring low
-int UP = 0;    // when the tea is lifted out of the cup
-int STIR_HIGH = 140; // high position for stirring
-int STIR_LOW = 90; // low position for stirring
+const int UP = 0;    // when the tea is lifted out of the cup
+const int STIR_HIGH = 140; // high position for stirring
+const int STIR_LOW = 90; // low position for stirring
 
 // Delay between each servo position adjustment during stirring
 // A lower value is associated with a quicker stirring
 int STIR_SMOOTH = 50;
 
-int STATUS_LED = 4; // Used to indicate that stirring is in progress
-int POWER_LED = 5; // Always on when the Arduino is powered
+const int STATUS_LED = 4; // Used to indicate that stirring is in progress
+const int POWER_LED = 5; // Always on when the Arduino is powered
 
-int TIMER_BUTTON = 6; // Used to increment the stirring time
-int stir_time; 
+const int BUTTON = 6; // Starts stirring when pressed
 
-int BUZZER = 10;
+const int TIME_POT = A5;
+int stir_time;
+
+const int BUZZER = 8; // Used to indicate end of stirring. Needs to be a PWM pin.
  
 void setup() 
 { 
@@ -50,6 +52,8 @@ void loop()
 		delay(500);
 	}
 	
+	Serial.println(getStirringTime());
+	delay(1000);
 	
 } 
 
@@ -77,14 +81,30 @@ bool isButtonPressed() {
 When the button is pressed, the TIMER_BUTTON pin is connected to ground and thus reads LOW.
 Alternatively, when the button is not pressed the pin is connected to 5v through the resistor and reads HIGH
 */
-	return (digitalRead(TIMER_BUTTON) ? false : true);
+	return (digitalRead(BUTTON) ? false : true);
 }
 
 void beepBuzzer() {
 /*
 To indicate the end of stirring, we play a G7(sol) twice for 1 second with a 2 second intermission.
 */
-	tone(pinOut, 3136, 1000);
+	tone(BUZZER, 3136, 1000);
 	delay(2000);
-	tone(pinOut, 3136, 1000);
+	tone(BUZZER, 3136, 1000);
+}
+
+long getStirringTime() {
+/*
+Get analog value from potentiometer (range 0-1023), re-base between 0 and 10 and multiply by 60*1000 to get the time in milliseconds.
+*/
+	float time = mapFloat(analogRead(TIME_POT), 0, 1023, 0, 10);
+	long millisTime = (long)(time*60*1000);
+	return millisTime;
+}
+
+float mapFloat(float x, float in_min, float in_max, float out_min, float out_max) {
+/*
+Helper function used to re-map an number from one range to another. We don't use the native 'map' because it only returns integers. 
+*/
+	return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }
