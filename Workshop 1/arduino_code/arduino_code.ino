@@ -16,14 +16,20 @@ int POWER_LED = 5; // Always on when the Arduino is powered
 
 int TIMER_BUTTON = 6; // Used to increment the stirring time
 int stir_time; 
+
+int BUZZER = 10;
  
 void setup() 
 { 
   myservo.attach(3);  // attaches the servo on pin 3 to the servo object 
+  
   pinMode(STATUS_LED, OUTPUT);
   pinMode(POWER_LED, OUTPUT);
   digitalWrite(POWER_LED, HIGH);
   digitalWrite(STATUS_LED, LOW);
+  
+  pinMode(BUZZER, OUTPUT);
+  digitalWrite(BUZZER, LOW);
   Serial.begin(9600);
 } 
  
@@ -72,4 +78,13 @@ When the button is pressed, the TIMER_BUTTON pin is connected to ground and thus
 Alternatively, when the button is not pressed the pin is connected to 5v through the resistor and reads HIGH
 */
 	return (digitalRead(TIMER_BUTTON) ? false : true);
+}
+
+void beepBuzzer() {
+/*
+To indicate the end of stirring, we play a G7(sol) twice for 1 second with a 2 second intermission.
+*/
+	tone(pinOut, 3136, 1000);
+	delay(2000);
+	tone(pinOut, 3136, 1000);
 }
