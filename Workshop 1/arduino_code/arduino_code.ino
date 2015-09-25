@@ -17,26 +17,24 @@ const int POWER_LED = 4; // Always on when the Arduino is powered
 
 const int BUTTON = 6; // Starts stirring when pressed
 
-const int TIME_POT = A5;
-int stir_time;
+const int TIME_POT = A5; // Potentiometer pin
 
 const int BUZZER = 8; // Used to indicate end of stirring. Needs to be a PWM pin.
  
 void setup() 
 { 
-
 	// Set up LED pins
 	pinMode(STATUS_LED, OUTPUT);
 	pinMode(POWER_LED, OUTPUT);
   
 	digitalWrite(POWER_LED, HIGH); // Turn on power led
-	digitalWrite(STATUS_LED, LOW);
+	digitalWrite(STATUS_LED, LOW); // Turn off status led
   
 	myservo.attach(SERVO);  // attaches the servo on pin 3 to the servo object
 	myservo.write(STIR_UP); // put servo to up position, ready to receive tea bag
   
-	pinMode(BUZZER, OUTPUT);
-	digitalWrite(BUZZER, LOW);
+	pinMode(BUZZER, OUTPUT); // Set up buzzer pin 
+	digitalWrite(BUZZER, LOW); 
 	Serial.begin(9600); // uncomment to print duration value to Serial
 } 
  
