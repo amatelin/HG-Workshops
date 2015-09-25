@@ -56,15 +56,20 @@ Assemble the frame and screw in the different components (buttons, servo and led
 <img width="50%" height="50%" align="right" src="https://github.com/amatelin/HG-Workshops/blob/master/Workshop%201/src/img/032_frame_add_components.JPG"/>
 
 Next solder the different components. 
+
 ![Soldering](https://github.com/amatelin/HG-Workshops/blob/master/Workshop%201/src/img/040_solder_components.JPG "Solder components")
+
 You'll probably want to start by soldering the passive elements and the wires on
-the perfboard. Next solder the wires to the buttons, the led and the potentiometer already embedded to the frame. 
+the perfboard. Then solder the wires to the buttons, the led and the potentiometer already embedded to the frame. 
+
 <img width="33%" height="50%" align="right" src="https://github.com/amatelin/HG-Workshops/blob/master/Workshop%201/src/img/041_solder_components.JPG"/>
 <img width="33%" height="50%" align="right" src="https://github.com/amatelin/HG-Workshops/blob/master/Workshop%201/src/img/042_solder_components.JPG"/>
 <img width="33%" height="50%" align="right" src="https://github.com/amatelin/HG-Workshops/blob/master/Workshop%201/src/img/051_plug_arduino.JPG"/>
-Next you just need to plug in the Arduino and the servo. Connect the Arduino to a computer and upload the code found in the folder *arduino_code*. 
+
+Finally you just need to plug in the Arduino and the servo. Connect the Arduino to a computer and upload the code found in the folder *arduino_code*. 
+
 <img width="50%" height="50%" align="right" src="https://github.com/amatelin/HG-Workshops/blob/master/Workshop%201/src/img/052_upload_code.JPG"/>
-<img width="50%" height="50%" align="right" src="https://github.com/amatelin/HG-Workshops/blob/master/Workshop%201/src/img/006_final_project.JPG"/>
+<img width="50%" height="50%" align="right" src="https://github.com/amatelin/HG-Workshops/blob/master/Workshop%201/src/img/06_final_project.JPG"/>
 Try and play with the potentiometer and the Serial console in order to match the angles with the corresponding time. Your project is ready, congratulations !
 
 
