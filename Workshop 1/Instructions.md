@@ -24,7 +24,7 @@ can be used instead of the perfboard.
 * 1x green 5mm LED
 * 1x red 5mm LED
 
-![alt text](https://github.com/amatelin/HG-Workshops/blob/master/Workshop%201/src/img/00_components.JPG "Components needed")
+![BOM](https://github.com/amatelin/HG-Workshops/blob/master/Workshop%201/src/img/00_components.JPG "Components needed")
 
 **Features** : the servo is used to lift the tea bag in or out of the cup. A potentiometer allows to set the time of stirring. 
 The pushbutton controls the beggining of the stirring cycle .When it stops the buzzer emits a beep. Each led is protected by a resistor. 
@@ -47,14 +47,26 @@ servo must be connected to a pin that allows Pulse Width Modulation (PWM).
 When the circuit is opened (button unpressed), D6 is low impedance and current flows from 5v to the input pin which thus reads HIGH. 
 Inversely when the circuit is closed (button pressed), the current flows directly to the ground and d6 reads LOW. 
 
-
-
 ###Assemble frame
 <img src="https://github.com/amatelin/HG-Workshops/blob/master/Workshop%201/src/img/02_frame_parts.JPG"/>
 Assemble the frame and screw in the different components (buttons, servo and leds).
 
 <img width="50%" height="50%" align="right" src="https://github.com/amatelin/HG-Workshops/blob/master/Workshop%201/src/img/031_frame_add_components.JPG"/>
 <img width="50%" height="50%" align="right" src="https://github.com/amatelin/HG-Workshops/blob/master/Workshop%201/src/img/032_frame_add_components.JPG"/>
+
+Next solder the different components. 
+![Soldering](https://github.com/amatelin/HG-Workshops/blob/master/Workshop%201/src/img/040_solder_components.JPG "Solder components")
+You'll probably want to start by soldering the passive elements and the wires on
+the perfboard. Next solder the wires to the buttons, the led and the potentiometer already embedded to the frame. 
+<img width="50%" height="50%" align="right" src="https://github.com/amatelin/HG-Workshops/blob/master/Workshop%201/src/img/041_solder_components.JPG"/>
+<img width="50%" height="50%" align="right" src="https://github.com/amatelin/HG-Workshops/blob/master/Workshop%201/src/img/042_solder_components.JPG"/>
+Next you just need to plug in the Arduino and the servo. Connect the Arduino to a computer and upload the code found in the folder *arduino_code*. 
+<img width="50%" height="50%" align="right" src="https://github.com/amatelin/HG-Workshops/blob/master/Workshop%201/src/img/051_plug_arduino.JPG"/>
+<img width="50%" height="50%" align="right" src="https://github.com/amatelin/HG-Workshops/blob/master/Workshop%201/src/img/052_upload_code.JPG"/>
+
+Try and play with the potentiometer and the Serial console in order to match the angles with the corresponding time. Your project is ready, congratulations !
+![Conclusion](https://github.com/amatelin/HG-Workshops/blob/master/Workshop%201/src/img/06_final_project.JPG "Final look")
+
 
 ###Video of the completed project :
 [![Watch](http://img.youtube.com/vi/GEQ1YadsMo0/0.jpg)](http://www.youtube.com/watch?v=GEQ1YadsMo0)
