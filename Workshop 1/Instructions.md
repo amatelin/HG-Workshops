@@ -33,8 +33,9 @@ The whole circuit is powered by a 9v battery through the Vin pin (a power jack c
 ###Circuit : breadboard 
 Start by testing your circuit on a breadboard in order to be sure that every component is working as it should. 
 
-<img width="50%" height="50%" align="left" src="https://github.com/amatelin/HG-Workshops/blob/master/Workshop%201/circuit_fritzing_bb.jpg"/>
+<img width="50%" height="50%" align="right" src="https://github.com/amatelin/HG-Workshops/blob/master/Workshop%201/circuit_fritzing_bb.jpg"/>
 <img width="50%" height="50%" align="right" src="https://github.com/amatelin/HG-Workshops/blob/master/Workshop%201/circuit_schematic.png"/>
+
 Here's how the circuit works : 
 * **Potentiometer**(RV1) : depending on the position of the axe, 0->5v is fed to the analog pin A5 of the Arduino. 
 The pin will thus read a value between 0 and 1023 that we will programatically rebase on a [0 - 10] range corresponding 
@@ -58,16 +59,14 @@ Next solder the different components.
 ![Soldering](https://github.com/amatelin/HG-Workshops/blob/master/Workshop%201/src/img/040_solder_components.JPG "Solder components")
 You'll probably want to start by soldering the passive elements and the wires on
 the perfboard. Next solder the wires to the buttons, the led and the potentiometer already embedded to the frame. 
-<img width="50%" height="50%" align="right" src="https://github.com/amatelin/HG-Workshops/blob/master/Workshop%201/src/img/041_solder_components.JPG"/>
-<img width="50%" height="50%" align="right" src="https://github.com/amatelin/HG-Workshops/blob/master/Workshop%201/src/img/042_solder_components.JPG"/>
+<img width="33%" height="50%" align="right" src="https://github.com/amatelin/HG-Workshops/blob/master/Workshop%201/src/img/041_solder_components.JPG"/>
+<img width="33%" height="50%" align="right" src="https://github.com/amatelin/HG-Workshops/blob/master/Workshop%201/src/img/042_solder_components.JPG"/>
+<img width="33%" height="50%" align="right" src="https://github.com/amatelin/HG-Workshops/blob/master/Workshop%201/src/img/051_plug_arduino.JPG"/>
 Next you just need to plug in the Arduino and the servo. Connect the Arduino to a computer and upload the code found in the folder *arduino_code*. 
-<img width="50%" height="50%" align="right" src="https://github.com/amatelin/HG-Workshops/blob/master/Workshop%201/src/img/051_plug_arduino.JPG"/>
 <img width="50%" height="50%" align="right" src="https://github.com/amatelin/HG-Workshops/blob/master/Workshop%201/src/img/052_upload_code.JPG"/>
-
+<img width="50%" height="50%" align="right" src="https://github.com/amatelin/HG-Workshops/blob/master/Workshop%201/src/img/006_final_project.JPG"/>
 Try and play with the potentiometer and the Serial console in order to match the angles with the corresponding time. Your project is ready, congratulations !
-![Conclusion](https://github.com/amatelin/HG-Workshops/blob/master/Workshop%201/src/img/06_final_project.JPG "Final look")
 
 
 ###Video of the completed project :
 [![Watch](http://img.youtube.com/vi/GEQ1YadsMo0/0.jpg)](http://www.youtube.com/watch?v=GEQ1YadsMo0)
-
