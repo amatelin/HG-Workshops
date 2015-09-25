@@ -62,9 +62,11 @@ Next solder the different components.
 You'll probably want to start by soldering the passive elements and the wires on
 the perfboard. Then solder the wires to the buttons, the led and the potentiometer already embedded to the frame. 
 
+
+<img width="33%" height="50%" align="right" src="https://github.com/amatelin/HG-Workshops/blob/master/Workshop%201/src/img/051_plug_arduino.JPG"/>
 <img width="33%" height="50%" align="right" src="https://github.com/amatelin/HG-Workshops/blob/master/Workshop%201/src/img/041_solder_components.JPG"/>
 <img width="33%" height="50%" align="right" src="https://github.com/amatelin/HG-Workshops/blob/master/Workshop%201/src/img/042_solder_components.JPG"/>
-<img width="33%" height="50%" align="right" src="https://github.com/amatelin/HG-Workshops/blob/master/Workshop%201/src/img/051_plug_arduino.JPG"/>
+
 
 Finally you just need to plug in the Arduino and the servo. Connect the Arduino to a computer and upload the code found in the folder *arduino_code*. 
 
